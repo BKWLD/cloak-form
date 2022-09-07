@@ -36,7 +36,7 @@ input
 
 	// Make border using shadow so it doesn't affect the layout when it changes
 	border none
-	border-radius 5px
+	border-radius cloak-form-radius
 	box-shadow 0 0 0 1px currentColor
 
 	// Fill container

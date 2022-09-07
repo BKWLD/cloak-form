@@ -1,5 +1,5 @@
 import { join } from 'path'
-import { setPublicDefaultOptions } from '@cloak-app/utils'
+import defaultsDeep from 'lodash/defaultsDeep'
 export default function() {
 
 	// Have Nuxt transpile resources
@@ -15,10 +15,10 @@ export default function() {
 		})
 	})
 
-	// Set default options
-	// setPublicDefaultOptions(this, 'form', {
-	// 	blockMaxWidth: 'max-w'
-	// })
+	// Configure style-resources module to append package definitions
+	defaultsDeep(this.options, { styleResources: { stylus: [] }})
+	this.options.styleResources.stylus
+		.push(join(__dirname, 'styles/definitions.styl'))
 }
 
 // Required for published modules

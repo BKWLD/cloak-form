@@ -1,0 +1,4 @@
+# Fetch a form block
+fragment formBlock on blocks_form_BlockType {
+	# Fields go here
+}

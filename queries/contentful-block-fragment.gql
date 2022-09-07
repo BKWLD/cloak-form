@@ -1,4 +1,0 @@
-# Fetch a form block
-fragment formBlock on BlockForm {
-	# Fields go here
-}

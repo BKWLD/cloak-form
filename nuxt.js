@@ -8,12 +8,6 @@ export default function() {
 	// Allow components to be auto-imported by Nuxt
 	this.nuxt.hook('components:dirs', dirs => {
 		dirs.push({
-			path: join(__dirname, './adapters'),
-			extensions: ['js', 'coffee'],
-			prefix: 'cloak-form',
-			level: 2,
-		})
-		dirs.push({
 			path: join(__dirname, './components'),
 			extensions: ['vue', 'js', 'coffee'],
 			prefix: 'cloak-form',
@@ -22,9 +16,9 @@ export default function() {
 	})
 
 	// Set default options
-	setPublicDefaultOptions(this, 'form', {
-		blockMaxWidth: 'max-w'
-	})
+	// setPublicDefaultOptions(this, 'form', {
+	// 	blockMaxWidth: 'max-w'
+	// })
 }
 
 // Required for published modules

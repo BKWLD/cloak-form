@@ -2,7 +2,7 @@
 
 <template lang='pug'>
 
-cloak-form-input-label(:label='label')
+cloak-form-field.textfield(:label='label')
 	input(
 		v-bind='{ name, placeholder, type, required, readonly, disabled }'
 		v-model='state')

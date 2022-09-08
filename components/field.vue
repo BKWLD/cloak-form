@@ -2,7 +2,7 @@
 
 <template lang='pug'>
 
-.input-label
+.field
 
 	label(v-if='label') {{ label }}
 

@@ -13,6 +13,11 @@ export default
 	render: (create, { data, props }) ->
 		create Textfield, {
 			...data
+
+			# Append the password class
+			staticClass: ['password', data.staticClass].join(' ').trim()
+
+			# Switch the textfield type
 			props: {
 				...props
 				type: 'password'

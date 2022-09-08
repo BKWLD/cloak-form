@@ -4,7 +4,7 @@
 
 cloak-form-input-label(:label='label')
 	input(
-		v-bind='{ placeholder, type, required, readonly, disabled }'
+		v-bind='{ name, placeholder, type, required, readonly, disabled }'
 		v-model='state')
 
 </template>

@@ -5,8 +5,13 @@ export default
 
 	props:
 
-		# Placeholder as well as input name
+		# Optional label
 		label: String
+
+		# Field name, falls back to label
+		name:
+			type: String
+			default: -> @label
 
 		# V-model value
 		value: String

@@ -4,10 +4,14 @@
 
 .field
 
-	label(v-if='label') {{ label }}
+	//- Put the input within the label to associate it
+	label(v-if='label')
 
-	//- The input is rendered here
-	slot
+		//- Style the text directly
+		.text {{ label }}
+
+		//- The input is rendered here
+		slot
 
 </template>
 
@@ -24,7 +28,7 @@ export default
 
 <style lang='stylus' scoped>
 
-label
+.text
 
 	// Render on own line
 	display block

@@ -2,7 +2,7 @@
 
 <template lang='pug'>
 
-cloak-form-field.textfield(:label='label')
+cloak-form-field.textfield(:label='label' label-position='right')
 	input(
 		type='checkbox'
 		v-bind='{ name, required, readonly, disabled }'
@@ -30,6 +30,7 @@ input
 
 	// Give the input dimensions
 	square 1em
+	flex-shrink 0
 
 	// Add the checked style as a box inside the box
 	position relative
@@ -49,6 +50,5 @@ input
 	&:checked:before
 		opacity 0.5
 		transition-duration .1s
-
 
 </style>

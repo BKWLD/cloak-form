@@ -24,3 +24,14 @@
 <cloak-form-password label='Password'>
 </cloak-form-password>
 ```
+
+## Checkbox
+
+<cloak-form-checkbox
+  label='I agree to the <a href="">terms</a>'>
+</cloak-form-checkbox>
+
+```vue
+<cloak-form-password label='Password'>
+</cloak-form-password>
+```

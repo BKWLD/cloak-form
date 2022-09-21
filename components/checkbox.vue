@@ -1,10 +1,11 @@
-<!-- A standard textfield input -->
+<!-- A single checkbox with label on right, like for opt ins -->
 
 <template lang='pug'>
 
 cloak-form-field.textfield(:label='label')
 	input(
-		v-bind='{ name, placeholder, type, required, readonly, disabled }'
+		type='checkbox'
+		v-bind='{ name, required, readonly, disabled }'
 		v-model='state')
 
 </template>
@@ -17,25 +18,37 @@ export default
 
 	mixins: [ inputMixin ]
 
-	props:
-
-		# Standard HTML props
-		type: String
-		placeholder: String
-
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <style lang='stylus' scoped>
 
+// Override default styling
 input
 	box-style()
 
-	// Make padding proportional to the text size
-	padding 0.75em 1em
+	// Give the input dimensions
+	square 1em
 
-	// Fill container
-	width 100%
+	// Add the checked style as a box inside the box
+	position relative
+	&:before
+		content ''
+		opacity 0
+		position absolute
+		top 2px
+		left @top
+		right @top
+		bottom @top
+		background currentColor
+		border-radius 'calc(%s * 0.5)' % cloak-form-radius
+		transition opacity .3s
+
+	// Reveal it
+	&:checked:before
+		opacity 0.5
+		transition-duration .1s
+
 
 </style>

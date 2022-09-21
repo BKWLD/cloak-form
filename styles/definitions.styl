@@ -1,2 +1,22 @@
 // Vars
 cloak-form-radius ?= var(--cloak-form-radius, 5px)
+
+// Apply common box-y input styles
+box-style()
+
+	// Make border using shadow so it doesn't affect the layout when it changes
+	border none
+	border-radius cloak-form-radius
+	box-shadow 0 0 0 1px currentColor
+
+	// Make the placholder a lower opacity version of current color
+	&::placeholder
+		color currentColor
+		opacity 0.5
+
+	// Customize the focus statate
+	outline none
+	transition box-shadow .3s
+	&:focus
+		transition-duration .1s
+		box-shadow 0 0 0 2px currentColor

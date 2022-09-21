@@ -8,7 +8,7 @@
 	label(v-if='label')
 
 		//- Style the text directly
-		.text {{ label }}
+		.text(v-html='label')
 
 		//- The input is rendered here
 		slot

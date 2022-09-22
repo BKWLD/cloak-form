@@ -49,6 +49,21 @@ export default
 
 <style lang='stylus' scoped>
 
+// Add a default line-height for long labels that looks beter
+.text
+	line-height 1.3
+
+// If checkable, make the label appear clickable
+.text
+	.checkbox &
+	.checkboxes &
+	.radios &
+		cursor pointer
+
+// Underline links in labels, like to privacy statements
+.text :deep(a)
+	text-decoration underline
+
 // When aligning the label to left or right, use flex
 .label-left
 .label-right
@@ -56,18 +71,20 @@ export default
 		flex-v-center()
 
 // Push input below top labels
+label-top-margin = 0.75em
+label-top-font-size-adjustment = 0.75
 .label-top .text
 	display block
-	margin-bottom 0.75em
+	margin-bottom label-top-margin
 
 	// Make bolder but smaller than body font
 	font-weight 600
-	font-size 0.75em
+	font-size 1em * label-top-font-size-adjustment
 
-// Push the text to the side of the input
+// Push the text to the side of the input a distance that matches the label-top
 .label-right .text
-	margin-left 0.75em
+	margin-left label-top-margin * label-top-font-size-adjustment
 .label-left .text
-	margin-right 0.75em
+	margin-right label-top-margin * label-top-font-size-adjustment
 
 </style>

@@ -4,7 +4,15 @@
 
 cloak-form-field.textfield(:label='label')
 	input.cloak-form-input(
-		v-bind='{ name, placeholder, type, required, readonly, disabled }'
+		v-bind=`{
+			name,
+			placeholder,
+			type,
+			required,
+			readonly,
+			disabled,
+			autocomplete,
+			maxlength, }`
 		v-model='state')
 
 </template>

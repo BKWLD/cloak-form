@@ -20,6 +20,8 @@ export default
 		required: Boolean
 		readonly: Boolean
 		disabled: Boolean
+		autocomplete: String
+		maxlength: Number | String
 
 	# Sync external v-model
 	data: -> state: @value

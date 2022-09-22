@@ -14,7 +14,7 @@ export default
 			default: -> @label
 
 		# V-model value
-		value: String
+		value: String | Boolean
 
 		# Add html5 attributes
 		required: Boolean

@@ -3,7 +3,7 @@
 <template lang='pug'>
 
 cloak-form-field.textfield(:label='label')
-	input(
+	input.cloak-form-input(
 		v-bind='{ name, placeholder, type, required, readonly, disabled }'
 		v-model='state')
 

@@ -2,7 +2,7 @@
 
 <template lang='pug'>
 
-.field(:class='classes')
+.cloak-form-field(:class='classes')
 
 	//- Put the input within the label to associate it
 	label(v-if='label')

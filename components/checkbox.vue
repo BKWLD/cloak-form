@@ -2,8 +2,8 @@
 
 <template lang='pug'>
 
-cloak-form-field.textfield(:label='label' label-position='right')
-	input(
+cloak-form-field.checkbox(:label='label' label-position='right')
+	input.cloak-form-input(
 		type='checkbox'
 		v-bind='{ name, required, readonly, disabled }'
 		v-model='state')

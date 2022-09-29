@@ -2,7 +2,10 @@
 
 <template lang='pug'>
 
-cloak-form-field.checkbox(:label='label' label-position='right')
+cloak-form-field.cloak-form-checkbox(
+	:label='label'
+	label-position='right')
+
 	input.cloak-form-input(
 		type='checkbox'
 		v-bind=`{
@@ -29,7 +32,7 @@ export default
 <style lang='stylus' scoped>
 
 // Override default styling
-input
+.cloak-form-input
 	box-style()
 
 	// Give the input dimensions

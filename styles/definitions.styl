@@ -1,5 +1,7 @@
 // Vars
 cloak-form-radius ?= var(--cloak-form-radius, 5px)
+cloak-form-input-height ?= var(--cloak-input-height, 2.5em)
+cloak-form-input-padding-h ?= var(--cloak-form-input-padding-h, 1em)
 
 // Apply common box-y input styles
 box-style()
@@ -20,3 +22,17 @@ box-style()
 	&:focus
 		transition-duration .2s
 		box-shadow 0 0 0 2px currentColor
+
+// Liek box-style, but adds styling used for 1 line inputs, like textfield
+// and select
+input-box-style()
+	box-style()
+
+	// Make padding proportional to the text size
+	padding-h cloak-form-input-padding-h
+
+	// Provide an explicit height so that other UI can be sized against it
+	height cloak-form-input-height
+
+	// Fill container
+	width 100%

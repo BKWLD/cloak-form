@@ -15,7 +15,7 @@ export default
 			...data
 
 			# Append the password class
-			staticClass: ['password', data.staticClass].join(' ').trim()
+			staticClass: ['cloak-form-password', data.staticClass].join(' ').trim()
 
 			# Switch the textfield type
 			props: {

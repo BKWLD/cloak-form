@@ -26,6 +26,23 @@
 </cloak-form-password>
 ```
 
+## Select
+
+<cloak-form-select
+  label='Choose One'
+  :options='[ { label: "Yes", value: "y" }, { label: "No", value: "n" }, ]'>
+</cloak-form-select>
+
+```vue
+<cloak-form-select
+  label='Choose One'
+  :options=`[
+    { label: "Yes", value: "y" },
+    { label: "No", value: "n" },
+  ]`>
+</cloak-form-select>
+```
+
 ## Checkbox
 
 <cloak-form-checkbox

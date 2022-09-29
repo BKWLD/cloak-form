@@ -2,7 +2,7 @@
 
 <template lang='pug'>
 
-cloak-form-field.textfield(:label='label')
+cloak-form-field.cloak-form-textfield(:label='label')
 	input.cloak-form-input(
 		v-bind=`{
 			name,
@@ -37,13 +37,7 @@ export default
 
 <style lang='stylus' scoped>
 
-input
-	box-style()
-
-	// Make padding proportional to the text size
-	padding 0.75em 1em
-
-	// Fill container
-	width 100%
+.cloak-form-input
+	input-box-style()
 
 </style>

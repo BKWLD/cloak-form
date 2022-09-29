@@ -17,6 +17,7 @@ Standardized form elements.
 - `<cloak-form-textfield/>`
 - `<cloak-form-password/>`
 - `<cloak-form-checkbox/>`
+- `<cloak-form-select/>`
 
 ## Contributing
 

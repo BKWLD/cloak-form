@@ -23,7 +23,10 @@ cloak-form-field.cloak-form-select(:label='label')
 
 		//- The icon that indicates this is a select
 		.toggle-icon: slot(name='toggle-icon')
-			.chevron(v-html='defaultToggleIcon')
+			svg.chevron(
+				xmlns='http://www.w3.org/2000/svg'
+				width='512' height='512' viewBox='0 0 512 512')
+				path(d='m512 176-64-64-192 192-192-192-64 64 255.999 256z')
 
 </template>
 
@@ -34,11 +37,6 @@ import inputMixin from '../mixins/input-mixin'
 export default
 
 	mixins: [ inputMixin ]
-
-	data: ->
-		defaultToggleIcon: '''
-			<svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m512 176-64-64-192 192-192-192-64 64 255.999 256z"/></svg>
-		'''
 
 	props:
 
@@ -61,7 +59,7 @@ export default
 	v-center()
 	right cloak-form-input-padding-h
 
-.chevron >>> svg
+.chevron
 	fill currentColor
 	square 0.75em
 
